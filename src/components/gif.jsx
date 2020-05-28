@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
-  handleClick= (event) => {
-    //something
+  handleClick = (event) => {
+    console.log(event.target.id);
+    this.props.selectFunction(event.target.id);
   }
 
   render() {
@@ -13,6 +14,7 @@ class Gif extends Component {
         alt=""
         className="gif"
         onClick={this.handleClick}
+        id={this.props.id}
       />
     );
   }
