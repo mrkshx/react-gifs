@@ -23,7 +23,10 @@ class App extends Component {
       limit: 10
     }, (err, res) => {
       // Res contains gif data!
-      console.log(res);
+      this.setState({
+        gifs: res.data
+      });
+
     });
   }
 
