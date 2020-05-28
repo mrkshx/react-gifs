@@ -12,8 +12,6 @@ class App extends Component {
       gifs: [],
       selectedGifID: "KGZCDBoaOPILHJc7RT"
     };
-
-    this.search('homer thinking');
   }
 
   search = (query) => {
