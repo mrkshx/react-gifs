@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Searchbar from './searchbar.jsx';
 import Gif from './gif.jsx';
 import GifList from './gif_list.jsx';
+import giphy from 'giphy-api';
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +12,19 @@ class App extends Component {
       gifs: [],
       selectedGifID: "KGZCDBoaOPILHJc7RT"
     };
+
+    this.search('homer thinking');
+  }
+
+  search = (query) => {
+    giphy('XBBHnRoKxSoVBlpZedT18pX6KGxFsHZ4').search({
+      q: query,
+      rating: 'g',
+      limit: 10
+    }, (err, res) => {
+      // Res contains gif data!
+      console.log(res);
+    });
   }
 
   render() {
