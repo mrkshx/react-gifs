@@ -11,6 +11,9 @@ module.exports = {
       template: '!!html-loader!templates/index.html'
     })
   ],
+  devServer: {
+    disableHostCheck: true,
+  },
   devtool: 'sourcemap',
   mode: "development",
   module: {
