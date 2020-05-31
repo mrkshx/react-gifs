@@ -10,7 +10,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifID: "KGZCDBoaOPILHJc7RT"
+      selectedGifID: null
     };
   }
 
